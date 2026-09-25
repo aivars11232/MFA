@@ -1,0 +1,24 @@
+# FORECAST/MFA configuration shared by every environment.
+#
+# Loading reads this file, then environments/<environment>.toml, whose values
+# replace the values here key by key. The caller must name the environment
+# ("development" or "production"); there is no default.
+#
+# Syntax is a strict subset of TOML: [table] headers, key = "string" pairs and
+# # comments. Every table and key must be known to the forecast-config crate
+# (src/core/config/); anything else makes loading fail.
+
+[paths]
+# Relative paths are resolved against the project root (the directory that
+# contains configs/); absolute paths are used as written.
+data = "data"
+models = "models"
+runtime = "runtime"
+
+[secrets]
+# Secret values are never written in configuration files. Each entry names the
+# environment variable that holds a secret, for example:
+#
+#   example_api_key = "env:MFA_EXAMPLE_API_KEY"
+#
+# The variable is read only when the secret is used, never while loading.

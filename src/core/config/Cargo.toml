@@ -1,0 +1,14 @@
+[package]
+name = "forecast-config"
+version = "0.1.0"
+edition = "2024"
+description = "FORECAST configuration boundary: environment overlays and secret references."
+publish = false
+
+# No dependencies: no dependency policy exists yet (ADR-0001), so configuration
+# files are read by the strict TOML-subset reader in src/parser.rs.
+[dependencies]
+
+[lints.rust]
+unsafe_code = "forbid"
+missing_docs = "warn"

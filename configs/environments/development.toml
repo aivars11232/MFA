@@ -1,0 +1,4 @@
+# Development: local building, research and replay.
+
+[logging]
+level = "DEBUG"

@@ -1,0 +1,4 @@
+# Production: unattended operation, including live shadow forecasting.
+
+[logging]
+level = "INFO"
