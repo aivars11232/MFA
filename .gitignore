@@ -3,9 +3,16 @@
 
 # Generated operational data, model artifacts and runtime state are not
 # committed unless explicitly authorized (REPOSITORY.md, VERSION_CONTROL_RULES.md).
-/data/
-/models/
-/runtime/
+# Only the directory skeleton (.gitkeep placeholders) is tracked.
+/data/**
+!/data/**/
+!/data/**/.gitkeep
+/models/**
+!/models/**/
+!/models/**/.gitkeep
+/runtime/**
+!/runtime/**/
+!/runtime/**/.gitkeep
 
 # Local secret files never enter Git (SECURITY_RULES.md).
 .env
